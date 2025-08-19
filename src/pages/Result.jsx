@@ -2,12 +2,11 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import QuizContext from "../QuizContext";
 import { useLocation } from "react-router-dom";
-
 import Lottie from "lottie-react";
-import celebration from '../assets/celebration_confetti.json'
+import celebration from "../assets/celebration_confetti.json";
 
 function Result() {
-  const { score, setScore, QuizQuestions } = useContext(QuizContext);
+  const { QuizQuestions } = useContext(QuizContext);
   const location = useLocation();
   const { finalScore } = location.state;
   return (
@@ -22,7 +21,7 @@ function Result() {
         </div>
         <div className="text-center">
           <p className="text-lg font-medium">Your score</p>
-          <span className="text-[#0D009F] font-medium text-2xl">
+          <span className="text-[#0D009F] font-semibold text-2xl">
             {finalScore} / {QuizQuestions.length}
           </span>
           <h2 className="font-bold text-2xl text-[#0D009F] mt-6">
@@ -32,9 +31,9 @@ function Result() {
             Great job, Betty! you have done well
           </p>
         </div>
-        <div className="border-1 border-blue-700">
+        <div className="w-96">
           <Link to="/">
-            <button className=" mx-3 absolute inset-x-0 bottom-5  p-3 rounded-xl  block  text-xl font-semibold bg-[#0D009F] text-white hover:bg-blue-900 cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]">
+            <button className=" w-full p-3 rounded-xl block text-lg font-semibold bg-[#0D009F] text-white hover:bg-blue-900 cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]">
               ← Back to Home
             </button>
           </Link>

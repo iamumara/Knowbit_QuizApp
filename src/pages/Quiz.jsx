@@ -2,6 +2,8 @@ import { React, useContext, useState } from "react";
 import QuizContext from "../QuizContext";
 import { useNavigate } from "react-router-dom";
 
+
+
 function Quiz() {
   const navigate = useNavigate();
   const { QuizQuestions } = useContext(QuizContext);
@@ -55,17 +57,17 @@ function Quiz() {
 
   return (
     <div className="bg-[#FCFCFC] w-full container m-auto ">
-      <div className="p-3">
+      <div className="py-1 px-3">
         <div className="bg-[#FCFCFC]">
           <div>
-            <div className="font-semibold text-2xl py-3">
+            <div className="font-semibold text-2xl pb-3">
               Question
               <span className="block text-2xl font-bold ">
                 <span className="text-[#0D009F]">{currentQ + 1}</span>
                 <span className="text-[#BEB9F9]">/{QuizQuestions.length}</span>
               </span>
             </div>
-            <div className="bg-[#0D009F] flex items-center min-h-40 px-4 py-2 rounded-2xl">
+            <div className="bg-[#0D009F] flex items-center min-h-36 px-4 py-2 rounded-2xl">
               <h2 className="text-xl font-medium text-white">
                 {QuizQuestions[currentQ].question}
               </h2>
@@ -77,13 +79,13 @@ function Quiz() {
                   key={idx}
                   type="button"
                   onClick={() => handleOptions(option)}
-                  className={`p-2 block w-full my-5 rounded-lg text-left font-xl font-semibold cursor-pointer ${
+                  className={`p-2 block w-full my-5 rounded-lg text-left font-xl font-medium cursor-pointer ${
                     selected === option
                       ? "bg-[#0D009F] text-white ring-2 ring-blue-300"
                       : "bg-[#F1F0FF] text-[#0D009F]"
                   }`}
                 >
-                  <span className="ml-3 mr-7 font-semibold text-xl inline-flex w-9 h-9 items-center justify-center bg-[#D3D0FF] rounded-full text-slate-900">
+                  <span className="ml-3 mr-5 font-semibold text-xl inline-flex w-9 h-9 items-center justify-center bg-[#D3D0FF] rounded-full text-slate-900">
                     {idx === 0 ? "a" : idx === 1 ? "b" : idx === 2 ? "c" : "d"}
                   </span>
                   {option}
@@ -114,9 +116,9 @@ function Quiz() {
             </div>
           </div>
         </div>
-        <div className=" py-3 h-100 relative md:h-auto md:static md:py-3">
+        <div className=" py-3">
           <button
-            className="absolute md:static inset-x-0 bottom-3 p-3 rounded-xl  block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
+            className=" p-3 rounded-xl  block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
             onClick={handleNextQuestion}
           >
             {currentQ >= QuizQuestions.length - 1 ? "Completed →" : "Next →"}
@@ -128,3 +130,13 @@ function Quiz() {
 }
 
 export default Quiz;
+
+
+{/* <div className=" py-3 h-100 relative md:h-auto md:static md:py-3">
+          <button
+            className="absolute md:static inset-x-0 bottom-3 p-3 rounded-xl  block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
+            onClick={handleNextQuestion}
+          >
+            {currentQ >= QuizQuestions.length - 1 ? "Completed →" : "Next →"}
+          </button>
+        </div> */}
