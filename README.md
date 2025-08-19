@@ -1,4 +1,5 @@
 ## Overview
+
 Title:- Knowbit (Quiz App)
 Description:- A Responsive Quiz taking app showing quiz result.
 
@@ -6,7 +7,9 @@ Link:- Checkout my projects .......... here will be link to projects
 
 ## ScreenShort
 
-
+![Alt text](./src/assets/HomepageUI.png) - Home page UI
+![Alt text](./src/assets/QuizpageUI.png) - Quiz page UI
+![Alt text](./src/assets/ResultUI.png) - Result page UI
 
 ## Folder Structure
 
@@ -28,22 +31,15 @@ src/
 - Dynamic rendering of questions and answers
 - Question Navigation – Next/Previous buttons
 
-
 ## Built With
 
-- **React** – Frontend library for building UI  
-- **Vite** – Fast build tool and development server  
-- **JavaScript (ES6+)** – Logic and interactivity  
-- **CSS / Tailwind CSS** – Styling and responsiveness  
-- **React Router** – For navigation between pages (Home, Quiz, Result)  
-- **Lottie React** - for Animations 
-
+- **React** – Frontend library for building UI
+- **Vite** – Fast build tool and development server
+- **JavaScript (ES6+)** – Logic and interactivity
+- **CSS / Tailwind CSS** – Styling and responsiveness
+- **React Router** – For navigation between pages (Home, Quiz, Result)
+- **Lottie React** - for Animations
 
 ## Credits
 
 - Favicon: [Quiz icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/quiz)
-
-
-
-
-
