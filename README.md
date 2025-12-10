@@ -3,13 +3,8 @@
 Title:- Knowbit (Quiz App)
 Description:- A Responsive Quiz taking app showing quiz result.
 
-Link:- Checkout my projects .......... here will be link to projects
+Project Link: https://knowbitquizapp.netlify.app/
 
-## ScreenShort
-
-![Alt text](./src/assets/HomepageUI.png) - Home page UI
-![Alt text](./src/assets/QuizpageUI.png) - Quiz page UI
-![Alt text](./src/assets/ResultUI.png) - Result page UI
 
 ## Folder Structure
 
@@ -39,6 +34,12 @@ src/
 - **CSS / Tailwind CSS** – Styling and responsiveness
 - **React Router** – For navigation between pages (Home, Quiz, Result)
 - **Lottie React** - for Animations
+
+## ScreenShort
+
+![Alt text](./src/assets/HomepageUI.png) - Home page UI
+![Alt text](./src/assets/QuizpageUI.png) - Quiz page UI
+![Alt text](./src/assets/ResultUI.png) - Result page UI
 
 ## Credits
 

@@ -10,8 +10,8 @@ function Result() {
   const location = useLocation();
   const { finalScore } = location.state;
   return (
-    <div className="bg-[#F1F0FF] w-full container m-auto relative">
-      <div className="p-3 h-screen flex flex-col items-center gap-y-15">
+    <div className="bg-[#F1F0FF] h-screen w-full container m-auto relative">
+      <div className="p-3 flex flex-col items-center gap-y-15">
         <div className="border-1 border-[#E2E0FF]  w-90 h-90 rounded-full flex items-center justify-center bg-[#E2E0FF]">
           <div className="border-1 border-[#E2E0FF]  w-70 h-70 rounded-full flex items-center justify-center bg-[#BEB9F9]">
             <div className="border-7 border-[#0D009F]  w-50 h-50 rounded-full flex items-center justify-center bg-[#F1F0FF]">

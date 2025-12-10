@@ -2,12 +2,9 @@ import { React, useContext, useState } from "react";
 import QuizContext from "../QuizContext";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Quiz() {
   const navigate = useNavigate();
   const { QuizQuestions } = useContext(QuizContext);
-
   const [currentQ, setCurrentQ] = useState(0);
   const [selected, setSelected] = useState("");
   const [answers, setAnswers] = useState(
@@ -27,7 +24,6 @@ function Quiz() {
       setSelected(option);
       newAnswers[currentQ] = option;
     }
-
     setAnswers(newAnswers);
   };
 
@@ -72,7 +68,6 @@ function Quiz() {
                 {QuizQuestions[currentQ].question}
               </h2>
             </div>
-
             <div>
               {QuizQuestions[currentQ].options.map((option, idx) => (
                 <button
@@ -92,7 +87,6 @@ function Quiz() {
                 </button>
               ))}
             </div>
-
             <div className="flex gap-7 items-center justify-between">
               <button
                 className={`p-2 block w-40 my-2 text-center rounded-lg font-xl font-semibold hover:bg-blue-900 text-white cursor-pointer active:ring-2 active:ring-blue-300 active:bg-[#0D009F] ${
@@ -106,7 +100,7 @@ function Quiz() {
                 {`<`} Previous
               </button>
               <button
-                className="p-2 block w-40 my-2 rounded-lg bg-[#0D009F]  font-xl font-semibold cursor-pointer hover:bg-blue-900 text-white active:ring-2 active:ring-blue-300 active:bg-[#0D009F]"
+                className="p-2 block w-40 my-2 rounded-lg bg-[#0D009F] font-xl font-semibold cursor-pointer hover:bg-blue-900 text-white active:ring-2 active:ring-blue-300 active:bg-[#0D009F]"
                 onClick={handleNextQuestion}
               >
                 {currentQ >= QuizQuestions.length - 1
@@ -118,7 +112,7 @@ function Quiz() {
         </div>
         <div className=" py-3">
           <button
-            className=" p-3 rounded-xl  block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
+            className=" p-3 rounded-xl block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
             onClick={handleNextQuestion}
           >
             {currentQ >= QuizQuestions.length - 1 ? "Completed →" : "Next →"}
@@ -130,13 +124,3 @@ function Quiz() {
 }
 
 export default Quiz;
-
-
-{/* <div className=" py-3 h-100 relative md:h-auto md:static md:py-3">
-          <button
-            className="absolute md:static inset-x-0 bottom-3 p-3 rounded-xl  block w-full text-xl font-semibold bg-[#0D009F] hover:bg-blue-900 text-white cursor-pointer active:ring-4 active:ring-blue-300 active:bg-[#0D009F]"
-            onClick={handleNextQuestion}
-          >
-            {currentQ >= QuizQuestions.length - 1 ? "Completed →" : "Next →"}
-          </button>
-        </div> */}
